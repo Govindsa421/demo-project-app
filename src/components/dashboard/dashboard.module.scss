@@ -1,0 +1,104 @@
+$primary-bg: #2d446e;
+$text-color: white;
+$icon-color: #94a3b8;
+$notification-bg: #ef4444;
+
+.dashboard {
+  display: flex;
+
+  .sidebar {
+    flex: 0 0 auto;
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      padding: 1rem;
+      background-color: $primary-bg;
+      color: $text-color;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        font-weight: bold;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+      }
+
+      .actions {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        .icon {
+          height: 1.5rem;
+          width: 1.5rem;
+          color: $icon-color;
+          cursor: pointer;
+        }
+
+        .notification {
+          position: relative;
+
+          .bell {
+            background-color: $icon-color;
+            color: $text-color;
+            padding: 0.25rem;
+            border-radius: 0.125rem;
+
+            .icon {
+              height: 1.25rem;
+              width: 1.25rem;
+              cursor: pointer;
+            }
+          }
+
+          .count {
+            position: absolute;
+            top: -0.25rem;
+            right: -0.75rem;
+            background-color: $notification-bg;
+            color: $text-color;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border-radius: 9999px;
+            height: 1rem;
+            width: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+
+        .profile {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+
+          .image {
+            width: 1.75rem;
+            height: 1.75rem;
+            border-radius: 0.25rem;
+            background-color: #d1d5db;
+            border: 2px solid $text-color;
+          }
+
+          .dropdown {
+            height: 1.25rem;
+            width: 1.25rem;
+            color: $icon-color;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .main {
+      padding: 1rem;
+    }
+  }
+}
